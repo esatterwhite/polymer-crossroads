@@ -4,11 +4,12 @@
   "authors": [
   	"Eric Satterwhite <esatterwhite@wi.rr.com>"
   ],
-  "description": "An element providing a solution to no problem in particular.",
+  "description": "An element providing crossroads.js and hasher routing system for browsers",
   "keywords": [
     "web-component",
     "polymer",
-    "seed"
+    "crossroads",
+    "hasher"
   ],
   "main": "crossroads-router.html",
   "license": "http://polymer.github.io/LICENSE.txt",

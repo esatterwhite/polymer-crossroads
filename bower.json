@@ -2,7 +2,7 @@
   "name": "crossroads-router",
   "version": "1.0.0",
   "authors": [
-    "Anonymous <anonymous@example.com>"
+  	"Eric Satterwhite <esatterwhite@wi.rr.com>"
   ],
   "description": "An element providing a solution to no problem in particular.",
   "keywords": [
@@ -12,7 +12,7 @@
   ],
   "main": "crossroads-router.html",
   "license": "http://polymer.github.io/LICENSE.txt",
-  "homepage": "https://github.com/<USERNAME>/seed-element/",
+  "homepage": "https://github.com/esatterwhite/polymer-crossroads",
   "ignore": [
     "/.*",
     "/test/"

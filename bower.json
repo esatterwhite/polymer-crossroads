@@ -1,8 +1,8 @@
 {
   "name": "crossroads-router",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [
-  	"Eric Satterwhite <esatterwhite@wi.rr.com>"
+    "Eric Satterwhite <esatterwhite@wi.rr.com>"
   ],
   "description": "An element providing crossroads.js and hasher routing system for browsers",
   "keywords": [

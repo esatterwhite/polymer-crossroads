@@ -1,0 +1,69 @@
+<!doctype html>
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <title>crossroads-router Demo</title>
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="../crossroads-router.html">
+    <link rel="import" href="../../paper-material/paper-material.html">
+    <link rel="import" href="../../iron-pages/iron-pages.html">
+    <link rel="import" href="../../paper-button/paper-button.html">
+    <style>
+      .panel{
+        margin:10px 0;
+      }
+    </style>
+  </head>
+  <body unresolved class="fullblead layout vertical">
+
+    <p>An example of <code>&lt;seed-element&gt;</code>:</p>
+    <crossroads-router default-route="more" hash-change></crossroads-router>
+
+    <paper-button raised data-route="one" id="btn-one">One</paper-button>
+    <paper-button raised data-route="two" id="btn-two">two</paper-button>
+    <paper-button raised data-route="three" id="btn-three">three</paper-button>
+    <paper-material elevation="2" class="layout flex vertical panel">
+      <iron-pages>
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+      </iron-pages>
+    </paper-material>
+
+    <script>
+      var pages = document.querySelector('iron-pages')
+
+      var buttons = Array.prototype.slice.apply( document.querySelectorAll('paper-button') )
+      var router = document.querySelector('crossroads-router')
+      router.map({
+        one: function(){
+          pages.select( 0 )
+        }
+        ,two: function(a,b,c,d,e){
+          pages.select( 1 )
+        }
+        ,three: function(){
+          pages.select( 2 )
+        }
+      })
+
+      buttons.forEach( function( btn ){
+        btn.addEventListener('click', function(){
+          router.dispatch( btn.dataset.route, [ 1,2,3 ] )
+        })
+      })
+
+
+    </script>
+  </body>
+</html>
